@@ -21,3 +21,6 @@ def calcular_media():
     n4=int(input(''))
     media= (n1+n2+n3+n4)/4
     print(f'A média anual é {media}')
+
+if __name__ == '__main__':
+    calcular_media.input = lambda k: numeros.pop()
