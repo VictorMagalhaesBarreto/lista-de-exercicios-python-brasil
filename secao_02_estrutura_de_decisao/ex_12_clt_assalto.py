@@ -53,3 +53,48 @@ até R$ 99999,99
 
 def calcular_salario_liquido(valor_hora: float, horas_trabalhadas: int):
     """Escreva aqui em baixo a sua solução"""
+    salario_bruto = valor_hora*horas_trabalhadas
+    print(f'Salário Bruto: (R$ {valor_hora:.2f} * {horas_trabalhadas})'.ljust(34), f': R${salario_bruto:>9.2f}')
+    inss = salario_bruto*0.1
+    sin = salario_bruto*0.03
+    fgts = salario_bruto*0.11
+    if salario_bruto <= 900:
+        ir=salario_bruto*0
+        total_descontos=ir+inss+sin
+        salario_liquido= salario_bruto-total_descontos
+        print(f'(-) IR (0%)'.ljust(34),f': R${ir:>9.2f}')
+        print(f'(-) INSS (10%)'.ljust(34),f': R${inss:>9.2f}')
+        print(f'(-) Sindicato (3%)'.ljust(34),f': R${sin:>9.2f}')
+        print(f'FGTS (11%)'.ljust(34),f': R${fgts:>9.2f}')
+        print(f'Total de descontos'.ljust(34),f': R${total_descontos:>9.2f}')
+        print(f'Salário Liquido'.ljust(34),f': R${salario_liquido:>9.2f}')
+    elif salario_bruto <= 1500:
+        ir = salario_bruto * 0.05
+        total_descontos = ir + inss + sin
+        salario_liquido = salario_bruto - total_descontos
+        print(f'(-) IR (5%)'.ljust(34), f': R${ir:>9.2f}')
+        print(f'(-) INSS (10%)'.ljust(34), f': R${inss:>9.2f}')
+        print(f'(-) Sindicato (3%)'.ljust(34), f': R${sin:>9.2f}')
+        print(f'FGTS (11%)'.ljust(34), f': R${fgts:>9.2f}')
+        print(f'Total de descontos'.ljust(34), f': R${total_descontos:>9.2f}')
+        print(f'Salário Liquido'.ljust(34), f': R${salario_liquido:>9.2f}')
+    elif salario_bruto <= 2500:
+        ir = salario_bruto * 0.1
+        total_descontos = ir + inss + sin
+        salario_liquido = salario_bruto - total_descontos
+        print(f'(-) IR (10%)'.ljust(34), f': R${ir:>9.2f}')
+        print(f'(-) INSS (10%)'.ljust(34), f': R${inss:>9.2f}')
+        print(f'(-) Sindicato (3%)'.ljust(34), f': R${sin:>9.2f}')
+        print(f'FGTS (11%)'.ljust(34), f': R${fgts:>9.2f}')
+        print(f'Total de descontos'.ljust(34), f': R${total_descontos:>9.2f}')
+        print(f'Salário Liquido'.ljust(34), f': R${salario_liquido:>9.2f}')
+    elif salario_bruto > 2500:
+        ir = salario_bruto * 0.2
+        total_descontos = ir + inss + sin
+        salario_liquido = salario_bruto - total_descontos
+        print(f'(-) IR (20%)'.ljust(34), f': R${ir:>9.2f}')
+        print(f'(-) INSS (10%)'.ljust(34), f': R${inss:>9.2f}')
+        print(f'(-) Sindicato (3%)'.ljust(34), f': R${sin:>9.2f}')
+        print(f'FGTS (11%)'.ljust(34), f': R${fgts:>9.2f}')
+        print(f'Total de descontos'.ljust(34), f': R${total_descontos:>9.2f}')
+        print(f'Salário Liquido'.ljust(34), f': R${salario_liquido:>9.2f}')
