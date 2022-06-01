@@ -23,13 +23,13 @@ def calcular_status(nota_1, nota_2, nota_3):
     """Escreva aqui em baixo a sua solução"""
 
     notas = [nota_1, nota_2, nota_3]
-    soma=0
+    soma = 0
     for v in notas:
-        soma+=v
-    media= soma/len(notas)
-    if media==10:
-        print("'Aprovado com Distinção'")
+        soma += v
+    media = soma/len(notas)
+    if media == 10:
+        return 'Aprovado com Distinção'
     elif media >= 7:
-        print("'Aprovado'")
+        return 'Aprovado'
     else:
-        print("'Reprovado'")
+        return 'Reprovado'
