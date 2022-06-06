@@ -35,7 +35,7 @@ def escrever_numeros_de_1_a_20(formato:str) -> str:
     """Escreva aqui em baixo a sua solução"""
     if formato == 'um_abaixo_do_outro':
         for v in range(1, 21):
-            print(v)
+            print(str(v))
     elif formato == 'um_ao_lado_do_outro':
         sequencia = ''
         for v in range(1, 21):
