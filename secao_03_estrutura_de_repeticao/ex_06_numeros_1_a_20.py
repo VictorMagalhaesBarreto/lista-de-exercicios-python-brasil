@@ -39,10 +39,10 @@ def escrever_numeros_de_1_a_20(formato:str) -> str:
     elif formato == 'um_ao_lado_do_outro':
         sequencia = ''
         for v in range(1, 21):
-            while v < 20:
-                sequencia += str(v) + ' '
-            else:
+            if v == 20:
                 sequencia += str(v)
+            else:
+                sequencia += str(v) + ' '
         print(sequencia)
 
 

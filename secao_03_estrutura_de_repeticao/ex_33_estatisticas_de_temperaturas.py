@@ -18,7 +18,14 @@ Mostre a média com uma casa decimal.
 
 
 """
+from statistics import mean
 
 
 def calcular_estatisticas(*temperaturas) -> str:
     """Escreva aqui em baixo a sua solução"""
+    if len(temperaturas) == 0:
+        return 'Maior temperatura: não existe. Menor temperatura: não existe. Média: não existe'
+    maior_temperatura = max(temperaturas)
+    menor_temperatura = min(temperaturas)
+    media_temperaturas = mean(temperaturas)
+    return f'Maior temperatura: {maior_temperatura}. Menor temperatura: {menor_temperatura}. Média: {media_temperaturas:.1f}'

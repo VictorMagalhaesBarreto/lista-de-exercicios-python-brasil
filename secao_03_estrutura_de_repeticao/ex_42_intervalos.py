@@ -40,3 +40,4 @@ A entrada de dados deverá terminar quando for lido um número negativo.
 
 def listar_numeros_para_avaliacao():
     """Escreva aqui em baixo a sua solução"""
+
