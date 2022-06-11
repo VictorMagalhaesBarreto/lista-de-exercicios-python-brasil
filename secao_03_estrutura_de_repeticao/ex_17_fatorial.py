@@ -26,4 +26,4 @@ def calcular_fatorial(n: int) -> int:
     fatorial = 1
     for v in range(1, n+1):
         fatorial *= v
-    print(fatorial, 'ha')
+    print(fatorial)
