@@ -29,3 +29,7 @@ Faça um programa que calcule o valor de H com N termos.
 
 def soma_serie(n):
     """Escreva aqui em baixo a sua solução"""
+    soma = 0
+    for v in range(1, n+1):
+        soma += 1 / v
+    print(f'H = {soma}')

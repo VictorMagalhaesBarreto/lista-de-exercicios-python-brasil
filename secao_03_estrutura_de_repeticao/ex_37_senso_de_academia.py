@@ -69,7 +69,6 @@ def rodar_senso():
         lista_nomes.append(nome)
         lista_alturas.append(float(altura))
         lista_pesos.append(float(peso))
-
     nome_altura = {altura:nome for nome, altura in zip(lista_nomes, lista_alturas)}
     maior_altura = max(nome_altura)
     menor_altura = min(nome_altura)
