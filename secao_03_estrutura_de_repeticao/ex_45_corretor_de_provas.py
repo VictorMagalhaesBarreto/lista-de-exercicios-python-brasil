@@ -55,11 +55,9 @@ def corrigir(*provas):
     for prova in provas:
         nota = 0
         aluno = prova[0]
-        aux = 1
-        for questao in prova[1:11]:
-            if questao == gabarito[aux]:
+        for questao, correcao in zip(prova[1:11], gabarito.values()):
+            if questao == correcao:
                 nota += 1
-            aux += 1
         resultados[nota] = aluno
     media = mean(resultados)
     maior = max(resultados)
@@ -72,6 +70,7 @@ def corrigir(*provas):
     print(f'Maior nota: {maior}')
     print(f'Menor nota: {menor}')
     print(f'Total de Alunos: {len(resultados)}')
+
 
 
 
