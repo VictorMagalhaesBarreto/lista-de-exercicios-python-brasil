@@ -114,6 +114,7 @@ def fechar_conta(*itens):
     codigo_preco = {'100':1.2,'101':1.3,'102':1.5,'103':1.2,'104':1.3,'105':1.0}
     codigo_nome = {'100': 'Cachorro Quente', '101': 'Bauru Simples', '102': 'Bauru com Ovo', '103': 'Hamburger',
                    '104': 'Cheeseburger', '105': 'Refrigerante'}
+    pedidos = []
     for codigo, quantidade in itens:
         codigo_quantidade[codigo] += quantidade
         codigo_preco[codigo] *= codigo_quantidade.get(codigo)
@@ -125,9 +126,11 @@ def fechar_conta(*itens):
         for codigo2, preco in codigo_preco.items():
             for codigo3, quantidade in codigo_quantidade.items():
                 if codigo1 == codigo2 and codigo2 == codigo3 and quantidade > 0:
-                    print(f'| {nome:<16} | {codigo1:<7}| {(preco/quantidade):<20.2f}|{quantidade:>11} |{preco:>11.2f} |')
+                    pedidos.append([nome, codigo1, preco/quantidade, quantidade, preco])
                     preco_total += preco
                     quantidade_total += quantidade
+    for nome, codigo, preco_unitario, quantidade, preco in pedidos:
+        print(f'| {nome:<16} | {codigo:<7}| {(preco / quantidade):<20.2f}|{quantidade:>11} |{preco:>11.2f} |')
     print('|---------------------------------------------------------------------------|')
     print('| Total Geral:'.ljust(49), f'|{quantidade_total:>11} |{preco_total:>11.2f} |')
     print('-----------------------------------------------------------------------------')

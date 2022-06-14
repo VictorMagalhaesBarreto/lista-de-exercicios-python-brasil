@@ -25,7 +25,6 @@ Altere o programa anterior para que ele aceite apenas números entre 0 e 1000.
 def calcular_estatisticas(*numeros) -> str:
     """Escreva aqui em baixo a sua solução"""
     maior = menor = 'não existe'
-    numeros = sorted(numeros)
     soma = 0
     for n in numeros:
         if n >= 0 and n <= 1000:
