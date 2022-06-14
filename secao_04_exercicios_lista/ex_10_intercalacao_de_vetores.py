@@ -19,4 +19,11 @@ deverão ser compostos pelos elementos intercalados dos dois outros vetores.
 
 def intercalar(lista_1: list, lista_2: list) -> list:
     """Escreva aqui em baixo a sua solução"""
+    lista_3 = []
+    for x, y in zip(lista_1, lista_2):
+        lista_3.append(x)
+        lista_3.append(y)
+    return lista_3
+
+
 

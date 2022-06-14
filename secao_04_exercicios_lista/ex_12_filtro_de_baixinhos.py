@@ -35,9 +35,27 @@ Mostre a média com uma casa decimal.
     2. Priscila, com 158 centímetros e 33 ano(s) de idade
 
 """
-
+from statistics import mean
 
 def calcular_baixinhos_com_mais_de_13_anos(*alunos):
     """Escreva aqui em baixo a sua solução"""
+    aux = total = 0
+    abaixo_media = []
+    for aluno in alunos:
+        total += aluno[2]
+    media = total/len(alunos)
+    for aluno in alunos:
+        if aluno[1] > 13 and aluno[2] < media:
+            abaixo_media.append(aluno)
+    print(f'Média de altura: {media:.1f} centímetros.')
+    if len(abaixo_media) > 0:
+
+        print(f'Existe(m) {len(abaixo_media)} aluno(s) com altura abaixo da média com mais de 13 anos:')
+        for nome, idade, altura in abaixo_media:
+            aux += 1
+            print(f'{aux}. {nome}, com {altura} centímetros e {idade} ano(s) de idade')
+    else:
+        print('Não há nenhum aluno abaixo da média')
+
 
 
