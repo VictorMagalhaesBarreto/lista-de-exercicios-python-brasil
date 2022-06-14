@@ -37,3 +37,6 @@ def calcular_serie_de_fibonacci(n: int) -> str:
     serie = str(serie)
     serie = serie[1:-1]
     return serie
+
+
+
