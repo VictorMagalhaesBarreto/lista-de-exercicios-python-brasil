@@ -18,3 +18,14 @@ Faça um programa que, dado um conjunto de N números, determine o menor valor, 
 
 def calcular_estatisticas(*numeros) -> str:
     """Escreva aqui em baixo a sua solução"""
+    if len(numeros) == 0:
+        maior = menor = 'não existe'
+        soma = 0
+    else:
+        numeros = sorted(numeros)
+        soma = sum(numeros)
+        maior = numeros[-1]
+        menor = numeros[0]
+    return f'Maior valor: {maior}. Menor valor: {menor}. Soma: {soma}'
+
+

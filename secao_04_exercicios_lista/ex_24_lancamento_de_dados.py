@@ -37,3 +37,17 @@ Mostre na tela:
 
 def lancar_dados(*valor_lancamentos):
     """Escreva aqui em baixo a sua solução"""
+    lados = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    aux = maior = 0
+
+    for v in valor_lancamentos:
+        lados[v] += 1
+        aux += 1
+    print(f'O dado foi lançado {aux} vezes')
+    for lado, repeticoes in lados.items():
+        print(f'O número {lado} caiu {repeticoes} vezes')
+        if repeticoes > maior:
+            lado_maior = lado
+            maior = repeticoes
+    print(f'O lado com o número {lado_maior} caiu mais vezes ({lados.get(lado_maior)} vezes)')
+

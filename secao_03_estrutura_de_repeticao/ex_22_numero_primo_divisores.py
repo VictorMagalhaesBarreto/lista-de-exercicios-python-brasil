@@ -50,3 +50,13 @@ divisível.
 
 def eh_primo(n: int) -> bool:
     """Escreva aqui em baixo a sua solução"""
+    aux = 0
+    for v in range(1, n + 1):
+        if n % v == 0:
+            aux += 1
+    if aux != 2:
+        for v in range(2, n):
+            if n % v == 0:
+                print(f'É divisível por {v}')
+        return False
+    return True

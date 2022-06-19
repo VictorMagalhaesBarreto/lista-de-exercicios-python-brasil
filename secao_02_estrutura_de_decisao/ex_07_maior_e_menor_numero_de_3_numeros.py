@@ -21,3 +21,16 @@ Faça um Programa que leia três números e mostre o maior e o menor deles.
 
 def calcular_maior_de_3_numeros(x, y, z):
     """Escreva aqui em baixo a sua solução"""
+    maior = x
+    if y > maior:
+        maior = y
+    if z > maior:
+        maior = z
+    menor = x
+    if y < menor:
+        menor = y
+    if z < menor:
+        menor = z
+
+    print(f'Maior: {maior}')
+    print(f'Menor: {menor}')
