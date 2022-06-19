@@ -41,3 +41,5 @@ def obter_numero_valido():
             return int(k)
         else:
             print(f'Número inválido: {k}')
+
+
